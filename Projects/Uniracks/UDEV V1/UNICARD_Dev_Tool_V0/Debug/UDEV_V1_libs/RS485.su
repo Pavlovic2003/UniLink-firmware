@@ -1,0 +1,5 @@
+../UDEV_V1_libs/RS485.c:14:6:RS485_Init	16	static
+../UDEV_V1_libs/RS485.c:20:6:RS485_Transmit_DMA	32	static
+../UDEV_V1_libs/RS485.c:38:9:RS485_TransmitDone	24	static
+../UDEV_V1_libs/RS485.c:44:6:RS485_Receive	16	static
+../UDEV_V1_libs/RS485.c:50:9:RS485_IsReceived	4	static

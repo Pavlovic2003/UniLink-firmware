@@ -1,0 +1,26 @@
+/*
+ * UDEV1_LEDpresets.h
+ *
+ *  Created on: Jan 23, 2025
+ *      Author: Admin
+ */
+
+#ifndef UDEV1_LEDPRESETS_H_
+#define UDEV1_LEDPRESETS_H_
+
+#include "UDEV1_LEDcontrol.h"
+
+typedef enum{
+	PRESET_OFF = 0,
+	PRESET_OVERCURRENT,
+	PRESET_NOTLINKEDWITHPC,
+	PRESET_LINKEDTOPC,
+	PRESET_CARDRECOGNISED,
+	PRESET_CARDNOTDETECTED,
+	PRESET_CARDNOTRECOGNISED,
+	PRESET_CARDCOMFAIL
+} LEDpreset_enum;
+
+RGBLEDS_struct LED_Preset(LEDpreset_enum LEDpreset);
+
+#endif /* UDEV1_LEDPRESETS_H_ */

@@ -1,0 +1,7 @@
+../UDEV_V1_libs/UDEV1_LEDcontrol.c:19:6:LED_init	16	static
+../UDEV_V1_libs/UDEV1_LEDcontrol.c:27:6:LED_DisplayChannel	16	static
+../UDEV_V1_libs/UDEV1_LEDcontrol.c:34:6:LED_UpdateTransition	32	static
+../UDEV_V1_libs/UDEV1_LEDcontrol.c:64:6:LED_UpdateEffect	24	static
+../UDEV_V1_libs/UDEV1_LEDcontrol.c:107:6:LED_Iterate	24	static
+../UDEV_V1_libs/UDEV1_LEDcontrol.c:120:6:LED_PWMSET	24	static
+../UDEV_V1_libs/UDEV1_LEDcontrol.c:127:6:LED_PWMCLEAR	4	static
