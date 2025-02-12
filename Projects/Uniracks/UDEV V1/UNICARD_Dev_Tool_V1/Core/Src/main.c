@@ -172,6 +172,8 @@ RS485cfg_struct RS485cfg = {0};
 char RS485TXbuffer[TXbuffSIZE] = {0};
 char RS485RXbuffer[RXbuffSIZE] = {0};
 
+char USBTXbuffer[TXbuffSIZE] = {0};
+
 int PCcon_Watchdog = 0, CardCon_Watchdog = 0;
 float ComFailCounter = 0;
 /* USER CODE END PV */
@@ -266,6 +268,8 @@ int main(void)
   RS485cfg.RXbuffer = RS485RXbuffer;
 
   RS485_Init(&RS485cfg);
+
+  UDEV1SCPI_init();
 
   //HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
   //HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adc1_data, 2);
@@ -1185,11 +1189,11 @@ void USB_CDC_RxHandler(uint8_t* Buf, uint32_t Len)
 {
 	// add SCPI
 
-	//ReformatString(RXbuff, RS485BUFFSIZE);
+	ReformatString(Buf, Len);
 
-	strcpy((char*)buf, "ERR\n\r");
+	strcpy(USBTXbuffer, "ERR:command\n\r");
 
-	struct word word = generateWordDirect((char*)buf);
+	struct word word = generateWordDirect((char*)Buf);
 
 	executeWord(word);
 
@@ -1207,7 +1211,7 @@ void USB_CDC_RxHandler(uint8_t* Buf, uint32_t Len)
 	/*const char* response = "Hello, World!\r\n";
 	uint32_t response_len = strlen(response);*/
 
-	CDC_Transmit_FS(Buf, response_len);
+	CDC_Transmit_FS(USBTXbuffer, strlen(USBTXbuffer));
 }
 /* USER CODE END 4 */
 

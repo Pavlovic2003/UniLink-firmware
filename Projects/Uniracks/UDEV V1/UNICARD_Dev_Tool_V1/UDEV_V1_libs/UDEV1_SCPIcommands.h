@@ -10,4 +10,6 @@
 
 #include "UniLink_SCPI.h"
 
+void UDEV1SCPI_init();
+
 #endif /* UDEV1_SCPICOMMANDS_H_ */

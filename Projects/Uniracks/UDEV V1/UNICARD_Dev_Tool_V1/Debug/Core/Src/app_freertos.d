@@ -55,7 +55,12 @@ Core/Src/app_freertos.o: ../Core/Src/app_freertos.c \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h \
- ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -114,3 +119,8 @@ Core/Src/app_freertos.o: ../Core/Src/app_freertos.c \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h:

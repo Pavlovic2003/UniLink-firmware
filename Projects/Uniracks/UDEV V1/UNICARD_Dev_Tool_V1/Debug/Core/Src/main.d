@@ -58,6 +58,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h \
  ../USBPD/App/usbpd.h \
  ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_core.h \
  ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_def.h \
@@ -73,13 +76,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  ../USB_Device/Target/usbd_conf.h \
  C:/Users/Admin/git/UniLink-firmware/libraries/General\ C/UniLink_SCPI.h \
- C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h \
  C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_LEDcontrol.h \
  C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_LEDpresets.h \
  C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_LEDcontrol.h \
- C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h \
- C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UNICARD1_lib.h \
- C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UNICARD1_lib.h
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -140,6 +140,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h:
 ../USBPD/App/usbpd.h:
 ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_core.h:
 ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_def.h:
@@ -159,10 +162,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 ../USB_Device/Target/usbd_conf.h:
 C:/Users/Admin/git/UniLink-firmware/libraries/General\ C/UniLink_SCPI.h:
-C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h:
 C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_LEDcontrol.h:
 C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_LEDpresets.h:
 C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_LEDcontrol.h:
-C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h:
 C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UNICARD1_lib.h:
-C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h:

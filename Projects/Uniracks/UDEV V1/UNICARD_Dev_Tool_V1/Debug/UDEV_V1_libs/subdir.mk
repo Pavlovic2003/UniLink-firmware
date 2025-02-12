@@ -9,6 +9,7 @@ C_SRCS += \
 ../UDEV_V1_libs/UDEV1_LEDcontrol.c \
 ../UDEV_V1_libs/UDEV1_LEDpresets.c \
 ../UDEV_V1_libs/UDEV1_RS485.c \
+../UDEV_V1_libs/UDEV1_SCPIcommands.c \
 ../UDEV_V1_libs/UNICARD1_lib.c 
 
 OBJS += \
@@ -16,6 +17,7 @@ OBJS += \
 ./UDEV_V1_libs/UDEV1_LEDcontrol.o \
 ./UDEV_V1_libs/UDEV1_LEDpresets.o \
 ./UDEV_V1_libs/UDEV1_RS485.o \
+./UDEV_V1_libs/UDEV1_SCPIcommands.o \
 ./UDEV_V1_libs/UNICARD1_lib.o 
 
 C_DEPS += \
@@ -23,6 +25,7 @@ C_DEPS += \
 ./UDEV_V1_libs/UDEV1_LEDcontrol.d \
 ./UDEV_V1_libs/UDEV1_LEDpresets.d \
 ./UDEV_V1_libs/UDEV1_RS485.d \
+./UDEV_V1_libs/UDEV1_SCPIcommands.d \
 ./UDEV_V1_libs/UNICARD1_lib.d 
 
 
@@ -33,7 +36,7 @@ UDEV_V1_libs/%.o UDEV_V1_libs/%.su UDEV_V1_libs/%.cyclo: ../UDEV_V1_libs/%.c UDE
 clean: clean-UDEV_V1_libs
 
 clean-UDEV_V1_libs:
-	-$(RM) ./UDEV_V1_libs/RS485.cyclo ./UDEV_V1_libs/RS485.d ./UDEV_V1_libs/RS485.o ./UDEV_V1_libs/RS485.su ./UDEV_V1_libs/UDEV1_LEDcontrol.cyclo ./UDEV_V1_libs/UDEV1_LEDcontrol.d ./UDEV_V1_libs/UDEV1_LEDcontrol.o ./UDEV_V1_libs/UDEV1_LEDcontrol.su ./UDEV_V1_libs/UDEV1_LEDpresets.cyclo ./UDEV_V1_libs/UDEV1_LEDpresets.d ./UDEV_V1_libs/UDEV1_LEDpresets.o ./UDEV_V1_libs/UDEV1_LEDpresets.su ./UDEV_V1_libs/UDEV1_RS485.cyclo ./UDEV_V1_libs/UDEV1_RS485.d ./UDEV_V1_libs/UDEV1_RS485.o ./UDEV_V1_libs/UDEV1_RS485.su ./UDEV_V1_libs/UNICARD1_lib.cyclo ./UDEV_V1_libs/UNICARD1_lib.d ./UDEV_V1_libs/UNICARD1_lib.o ./UDEV_V1_libs/UNICARD1_lib.su
+	-$(RM) ./UDEV_V1_libs/RS485.cyclo ./UDEV_V1_libs/RS485.d ./UDEV_V1_libs/RS485.o ./UDEV_V1_libs/RS485.su ./UDEV_V1_libs/UDEV1_LEDcontrol.cyclo ./UDEV_V1_libs/UDEV1_LEDcontrol.d ./UDEV_V1_libs/UDEV1_LEDcontrol.o ./UDEV_V1_libs/UDEV1_LEDcontrol.su ./UDEV_V1_libs/UDEV1_LEDpresets.cyclo ./UDEV_V1_libs/UDEV1_LEDpresets.d ./UDEV_V1_libs/UDEV1_LEDpresets.o ./UDEV_V1_libs/UDEV1_LEDpresets.su ./UDEV_V1_libs/UDEV1_RS485.cyclo ./UDEV_V1_libs/UDEV1_RS485.d ./UDEV_V1_libs/UDEV1_RS485.o ./UDEV_V1_libs/UDEV1_RS485.su ./UDEV_V1_libs/UDEV1_SCPIcommands.cyclo ./UDEV_V1_libs/UDEV1_SCPIcommands.d ./UDEV_V1_libs/UDEV1_SCPIcommands.o ./UDEV_V1_libs/UDEV1_SCPIcommands.su ./UDEV_V1_libs/UNICARD1_lib.cyclo ./UDEV_V1_libs/UNICARD1_lib.d ./UDEV_V1_libs/UNICARD1_lib.o ./UDEV_V1_libs/UNICARD1_lib.su
 
 .PHONY: clean-UDEV_V1_libs
 

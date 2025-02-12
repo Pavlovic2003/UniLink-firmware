@@ -5,8 +5,8 @@
  *      Author: kuban
  */
 
-#ifndef INC_SCPI_LIB_H_
-#define INC_SCPI_LIB_H_
+#ifndef INC_UNILINK_SCPI_H_
+#define INC_UNILINK_SCPI_H_
 
 #include <string.h>
 #include <stdio.h>

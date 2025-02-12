@@ -1,36 +1,35 @@
+/*
+ * SCPI_lib.c
+ *
+ *  Created on: Apr 8, 2024
+ *      Author: kuban
+ */
 
+#include "UniLink_SCPI.h"
 
-  SCPI_lib.c
- 
-   Created on Apr 8, 2024
-       Author kuban
- 
-
-#include SCPI_lib.h
-
-char paramsList[3] = { OFF, ON,   };
+char* paramsList[3] = { "OFF", "ON", "? " };
 int paramsLength = 3;
 
-struct function functionList;
+struct function *functionList;
 int functionLength = 0;
 
-void ReformatString(char chararr, int arrMaxSize)
+void ReformatString(char* chararr, int arrMaxSize)
 {
-	for (int i = 0; i  arrMaxSize && chararr[i] != '0'; i++)	 format into proper string so stdlib.h can be used
+	for (int i = 0; i < arrMaxSize && chararr[i] != '\0'; i++)	// format into proper string so stdlib.h can be used
 	{
-		if (chararr[i] == 'r'  chararr[i] == 'n')
+		if (chararr[i] == '\r' || chararr[i] == '\n')
 		{
-			chararr[i] = '0';
+			chararr[i] = '\0';
 			return;
 		}
 	}
 }
 
-struct subword generateSubwordn(char subcommand, int length)
+struct subword generateSubwordn(char* subcommand, int length)
 {
 	struct subword finalSubword = { .type = params, .function = 0, .integerParam = 0, .otherParam = NULL, .paramType = 0};
 
-	for (int i = 0; i  functionLength; i++)
+	for (int i = 0; i < functionLength; i++)
 	{
 		if (!strncmp(subcommand, functionList[i].name, length))
 		{
@@ -40,7 +39,7 @@ struct subword generateSubwordn(char subcommand, int length)
 		}
 	}
 
-	for (int i = 0; i  paramsLength; i++)
+	for (int i = 0; i < paramsLength; i++)
 	{
 		if (!strncmp(subcommand, paramsList[i], length))
 		{
@@ -58,28 +57,28 @@ struct subword generateSubwordn(char subcommand, int length)
 	}
 
 	finalSubword.paramType = OTHER_P;
-	finalSubword.otherParam = (char) malloc(sizeof(char)  (length + 1));
+	finalSubword.otherParam = (char*) malloc(sizeof(char) * (length + 1));
 	if(finalSubword.otherParam != NULL) strncpy(finalSubword.otherParam, subcommand, length);
 	return finalSubword;
 }
 
-struct word generateWordDirect(char command)
+struct word generateWordDirect(char* command)
 {
 	struct word finalWord = { .address = -1, .subwords = NULL, .subwordsCount = 0 };
 
-	char currSymbol = command;
+	char* currSymbol = command;
 	int intermediateLength = 0;
 
 	int isLast = 0;
 
 	while (!isLast)
 	{
-		isLast = currSymbol == '0';
-		switch (currSymbol)
+		isLast = *currSymbol == '\0';
+		switch (*currSymbol)
 		{
-			case ''	
-			case '0'	
-			case ''	
+			case ':'	:
+			case '\0'	:
+			case '?'	:
 
 				if(intermediateLength == 0) break;
 				if (finalWord.address == -1)
@@ -90,10 +89,10 @@ struct word generateWordDirect(char command)
 				else
 				{
 					finalWord.subwordsCount++;
-					struct subword intermediate = (struct subword)realloc(finalWord.subwords, finalWord.subwordsCount  sizeof(struct subword));
+					struct subword *intermediate = (struct subword*)realloc(finalWord.subwords, finalWord.subwordsCount * sizeof(struct subword));
 					if (intermediate != NULL)
 					{
-						finalWord.subwords = intermediate;																				
+						finalWord.subwords = intermediate;																				///??????
 						finalWord.subwords[finalWord.subwordsCount - 1] = generateSubwordn(currSymbol - intermediateLength, intermediateLength);
 					}
 				}
@@ -102,20 +101,20 @@ struct word generateWordDirect(char command)
 
 				break;
 
-			default
+			default:
 				intermediateLength++;
 				break;
 
 		}
 
-		if(currSymbol == '')
+		if(*currSymbol == '?')
 		{
 			finalWord.subwordsCount++;
-			struct subword intermediate = (struct subword)realloc(finalWord.subwords, finalWord.subwordsCount  sizeof(struct subword));
+			struct subword* intermediate = (struct subword*)realloc(finalWord.subwords, finalWord.subwordsCount * sizeof(struct subword));
 			if (intermediate != NULL)
 			{
-				finalWord.subwords = intermediate;																						
-				finalWord.subwords[finalWord.subwordsCount - 1] = generateSubwordn(, 1);
+				finalWord.subwords = intermediate;																						///??????
+				finalWord.subwords[finalWord.subwordsCount - 1] = generateSubwordn("?", 1);
 			}
 		}
 
@@ -127,17 +126,17 @@ struct word generateWordDirect(char command)
 
 void executeWord(struct word word)
 {
-	if (word.subwordsCount  1) return;
+	if (word.subwordsCount < 1) return;
 	if (word.subwords == NULL) return;
 	if (word.subwords[0].type != function) return;
 	int listIndex = (int)word.subwords[0].function;
 	functionList[listIndex].run(word.subwords + 1, word.subwordsCount - 1);
 }
 
-void addFunction(char name, void (func)(struct subword, int))
+void addFunction(char *name, void (*func)(struct subword*, int))
 {
 	functionLength++;
 	struct function newFunc = {.name = name, .run = func};
-	functionList = (struct function) realloc(functionList, functionLength  sizeof(struct function));
+	functionList = (struct function*) realloc(functionList, functionLength * sizeof(struct function));
 	functionList[functionLength - 1] = newFunc;
 }

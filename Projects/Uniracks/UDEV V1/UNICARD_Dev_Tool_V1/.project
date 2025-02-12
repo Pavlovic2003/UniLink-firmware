@@ -29,4 +29,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>General C</name>
+			<type>2</type>
+			<location>C:/Users/Admin/git/UniLink-firmware/libraries/General C</location>
+		</link>
+	</linkedResources>
 </projectDescription>

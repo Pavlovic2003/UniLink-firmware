@@ -1,5 +1,7 @@
-USBPD/usbpd_dpm_user.o: ../USBPD/usbpd_dpm_user.c ../Core/Inc/main.h \
- ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
+UDEV_V1_libs/UDEV1_SCPIcommands.o: ../UDEV_V1_libs/UDEV1_SCPIcommands.c \
+ ../UDEV_V1_libs/UDEV1_SCPIcommands.h \
+ C:/Users/Admin/git/UniLink-firmware/libraries/General\ C/UniLink_SCPI.h \
+ ../Core/Inc/main.h ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
  ../Core/Inc/stm32g4xx_hal_conf.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h \
@@ -61,14 +63,9 @@ USBPD/usbpd_dpm_user.o: ../USBPD/usbpd_dpm_user.c ../Core/Inc/main.h \
  C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h \
  C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h \
  C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h \
- ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_core.h \
- ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_def.h \
- ../Drivers/CMSIS/Include/cmsis_compiler.h ../USBPD/usbpd_dpm_user.h \
- ../USBPD/usbpd_pdo_defs.h \
- ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_def.h \
- ../USBPD/usbpd_dpm_core.h ../USBPD/usbpd_dpm_conf.h \
- ../USBPD/usbpd_vdm_user.h ../USBPD/usbpd_pwr_if.h \
- ../USBPD/usbpd_pwr_user.h
+ ../UDEV_V1_libs/UDEV1_board.h ../UDEV_V1_libs/RS485.h
+../UDEV_V1_libs/UDEV1_SCPIcommands.h:
+C:/Users/Admin/git/UniLink-firmware/libraries/General\ C/UniLink_SCPI.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -132,14 +129,5 @@ USBPD/usbpd_dpm_user.o: ../USBPD/usbpd_dpm_user.c ../Core/Inc/main.h \
 C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h:
 C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h:
 C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h:
-../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_core.h:
-../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_def.h:
-../Drivers/CMSIS/Include/cmsis_compiler.h:
-../USBPD/usbpd_dpm_user.h:
-../USBPD/usbpd_pdo_defs.h:
-../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_def.h:
-../USBPD/usbpd_dpm_core.h:
-../USBPD/usbpd_dpm_conf.h:
-../USBPD/usbpd_vdm_user.h:
-../USBPD/usbpd_pwr_if.h:
-../USBPD/usbpd_pwr_user.h:
+../UDEV_V1_libs/UDEV1_board.h:
+../UDEV_V1_libs/RS485.h:

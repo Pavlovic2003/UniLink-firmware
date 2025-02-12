@@ -25,6 +25,7 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32G4xx_HAL_Driver/Src \
+General\ C \
 Middlewares/ST/STM32_USBPD_Library/Core/src \
 Middlewares/ST/STM32_USBPD_Library/Devices/STM32G4XX/src \
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \

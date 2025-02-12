@@ -43,13 +43,27 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "cmsis_os.h"
+#include "UDEV1_DeviceState.h"
+#include "UDEV1_board.h"
+#include "RS485.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim5;
+extern osMutexId_t mutex_RS485Handle;
+extern UDEV1_MainStates MainState;
+extern UDEV1_CardStates CardState;
+
+extern RS485cfg_struct RS485cfg;
+
+extern char RS485TXbuffer[TXbuffSIZE];
+extern char RS485RXbuffer[RXbuffSIZE];
+extern char USBTXbuffer[TXbuffSIZE];
+
+extern float ComFailCounter;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

@@ -47,6 +47,20 @@ Core/Src/stm32g4xx_it.o: ../Core/Src/stm32g4xx_it.c ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ ../Core/Inc/FreeRTOSConfig.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h \
+ C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h \
  ../Core/Inc/stm32g4xx_it.h ../USBPD/App/usbpd.h \
  ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_core.h \
  ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_def.h \
@@ -107,6 +121,20 @@ Core/Src/stm32g4xx_it.o: ../Core/Src/stm32g4xx_it.c ../Core/Inc/main.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+../Core/Inc/FreeRTOSConfig.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_DeviceState.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/UDEV1_board.h:
+C:/Users/Admin/git/UniLink-firmware/Projects/Uniracks/UDEV\ V1/UNICARD_Dev_Tool_V1/UDEV_V1_libs/RS485.h:
 ../Core/Inc/stm32g4xx_it.h:
 ../USBPD/App/usbpd.h:
 ../Middlewares/ST/STM32_USBPD_Library/Core/inc/usbpd_core.h:
