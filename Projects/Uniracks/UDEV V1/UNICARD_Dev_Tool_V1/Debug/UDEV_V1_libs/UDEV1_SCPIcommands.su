@@ -1,2 +1,2 @@
-../UDEV_V1_libs/UDEV1_SCPIcommands.c:14:6:SENDfunc	40	static
-../UDEV_V1_libs/UDEV1_SCPIcommands.c:66:6:UDEV1SCPI_init	8	static
+../UDEV_V1_libs/UDEV1_SCPIcommands.c:14:6:SENDfunc	56	static
+../UDEV_V1_libs/UDEV1_SCPIcommands.c:66:6:UDEV1SCPI_init	32	static

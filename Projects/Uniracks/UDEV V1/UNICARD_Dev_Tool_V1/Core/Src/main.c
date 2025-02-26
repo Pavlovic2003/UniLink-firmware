@@ -1189,25 +1189,7 @@ void USB_CDC_RxHandler(uint8_t* Buf, uint32_t Len)
 {
 	// add SCPI
 
-	ReformatString(Buf, Len);
-
-	strcpy(USBTXbuffer, "ERR:command\n\r");
-
-	struct word word = generateWordDirect((char*)Buf);
-
-	executeWord(word);
-
-	for(int i = word.subwordsCount; i > 0 ; i--)
-	{
-		if (word.subwords[i].paramType == OTHER_P && word.subwords[i].otherParam != NULL)
-		{
-			free(word.subwords[i].otherParam);
-			word.subwords[i].otherParam = NULL;
-		}
-	}
-	free(word.subwords);
-	word.subwords = NULL;
-
+	SCPI_EXECUTE((char*)Buf, Len);
 	/*const char* response = "Hello, World!\r\n";
 	uint32_t response_len = strlen(response);*/
 

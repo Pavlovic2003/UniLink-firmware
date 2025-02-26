@@ -65,5 +65,7 @@ void SENDfunc(struct subword* subwords, int length)
 
 void UDEV1SCPI_init()
 {
-	addFunction("SEND", SENDfunc);
+    Function CARDfunctions[] = {{.name = "SEND", .run = SENDfunc}};
+    Class CARDclass = { .name = "CARD", .functions = CARDfunctions, .functionsLength = 1 };
+    addClass(&CARDclass, 0);
 }
